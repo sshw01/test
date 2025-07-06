@@ -1,0 +1,12 @@
+<h1>{{ project.title }}</h1>
+<p>-프로젝트 상세설명-</p>
+<p>{{ project.description }}</p>
+
+<a href="{% url 'project_list' %}">
+  <button>다른 프로젝트 보러 가기</button>
+</a>
+
+<a href="{% url 'vote_all' %}">
+  <button>투표하러 가기</button>
+</a>
+

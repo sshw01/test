@@ -1,0 +1,8 @@
+<h1>투표 결과</h1>
+<ul>
+  {% for project in projects %}
+    <li>
+      {{ forloop.counter}}등: {{project.title }} - 평균 점수: {{ project.avg_score }}
+    </li>
+  {% endfor %}
+</ul>

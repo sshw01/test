@@ -1,0 +1,19 @@
+<h1>투표하기</h1>
+<form method="post">
+  {% csrf_token %}
+  <ul>
+    {% for project in projects %}
+      <li>
+        <strong>{{ project.title }}</strong>
+        <select name="score_{{ project.id }}">
+          <option value="">점수 선택</option>
+          {% for i in "12345" %}
+            <option value="{{ i }}">{{ i }}</option>
+          {% endfor %}
+        </select>
+      </li>
+    {% endfor %}
+  </ul>
+  <button type="submit">등록하기</button>
+</form>
+
